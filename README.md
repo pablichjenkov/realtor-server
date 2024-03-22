@@ -41,5 +41,41 @@ This repository contains the source code for the Realtor-WEB API development usi
 - **PUT /v1/contact/{id}**: Update a specific contact entry by ID.
 - **DELETE /v1/contact/{id}**: Delete a specific contact entry by ID.
 
+##Deploy an application﻿
+Note: I already setuped all the stuff for the heroku. To deploy the application to Heroku using Git, open the terminal and follow the steps below:
+Commit changes made in the previous section locally:
+
+Commit changes made in the previous section locally:
+
+```
+git add .
+git commit -m "Prepare app for deploying"
+```
+### Login to Heroku CLI:
+
+```heroku login```
+### Create a Heroku application using the heroku create command. You need to replace ktor-sample-heroku with a name of your application:
+
+```heroku create ktor-sample-heroku```
+### This command does two things:
+
+Creates a new Heroku application, which is available on the web dashboard.
+
+Adds a new Git remote called heroku to a local repository.
+
+To deploy the application, push changes to heroku main...
+
+```git push heroku main```
+... and wait until Heroku builds and publishes the application:
+
+...
+```
+remote: https://ktor-sample-heroku.herokuapp.com/ deployed to Heroku
+remote:
+remote: Verifying deploy... done.
+```
+
+
+
 ## License
 This project is licensed under the [MIT License](LICENSE).
